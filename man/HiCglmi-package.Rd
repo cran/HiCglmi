@@ -14,7 +14,7 @@ Raphael Mourad
 Maintainer: Raphael Mourad, raphael.mourad@ibcg.biotoul.fr
 }
 \references{
-TO ADD when published.
+Raphael Mourad, Lang Li and Olivier Cuvier. Uncovering direct and indirect molecular determinants of chromatin loops using a computational integrative approach, PLOS Computational Biology, 2017, 13(5):e1005538. 
 }
 
 \examples{
