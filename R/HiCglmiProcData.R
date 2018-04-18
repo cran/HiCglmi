@@ -78,8 +78,8 @@ for(i in 1:length(genomicFeatureList.GR)){
   HiC_left.Fac=as(annot_lefti,"Matrix")
   HiC_right.Fac=as(annot_righti,"Matrix")
  }else{
-  HiC_left.Fac=cBind(HiC_left.Fac,annot_lefti)
-  HiC_right.Fac=cBind(HiC_right.Fac,annot_righti)
+  HiC_left.Fac=cbind(HiC_left.Fac,annot_lefti)
+  HiC_right.Fac=cbind(HiC_right.Fac,annot_righti)
  }
  rm(annot_lefti,annot_righti)
 

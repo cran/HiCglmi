@@ -1,10 +1,10 @@
-0677953cd10976c217d206f96a06cdf3 *DESCRIPTION
-ec52039d1b6427bfb40389eb6b17ba2e *NAMESPACE
+fd4702ad0f762ef894fa31ccc129e5da *DESCRIPTION
+1c46669b33eff6ce00a06a5b59c30564 *NAMESPACE
 b16285056fa2c36d9d7f7f745ae8dc23 *R/HiCglmiMiscFun.R
-108fad31e3130f88ccd90dec2995934d *R/HiCglmiModel.R
-af4cec271b02679aef1cbaeba261b219 *R/HiCglmiProcData.R
-7657c105607eebf5fc287c42f5ab7160 *build/partial.rdb
-e14d14061cafcfc7ab03d8f4309e8ee2 *data/dataExample.RData
+6fe6f53c61153122039306de9a04b082 *R/HiCglmiModel.R
+91c42f9247255723430f65978de6ca2b *R/HiCglmiProcData.R
+85cab7f238915f2bb332ad334da037af *build/partial.rdb
+4087a8b495f56edbc0616a02d15926bb *data/dataExample.RData
 a7e8c093cf91f1dd1be22dc67ffb58bf *data/datalist
 9aa4bb39e48d1626ec1fd93f7f770b4e *inst/extdata/BEAF32_macs2_Kc167_dm3.bed
 af5e48d01a5543fda4c26a05f323c7e2 *man/HiCglmi-package.Rd

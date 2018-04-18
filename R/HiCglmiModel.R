@@ -59,7 +59,7 @@ if(!orient){
  HiC_mat.FacMarg=as((HiC_left.Fac+HiC_right.Fac)/2,"Matrix")
  colnames(HiC_mat.FacMarg)=facModelS
 }else if(orient){
- HiC_mat.FacMarg=cBind(HiC_left.Fac,HiC_right.Fac)
+ HiC_mat.FacMarg=cbind(HiC_left.Fac,HiC_right.Fac)
 }
 HiC_mat.FacMarg=as(HiC_mat.FacMarg,"dgCMatrix")
 
@@ -75,7 +75,7 @@ for(i in 1:length(facModelS)){
   if(is.null(HiC_mat.FacMarg2)){
    HiC_mat.FacMarg2=as(HiC_mat.FacMarg2ij,"Matrix")
   }else{
-   HiC_mat.FacMarg2=cBind(HiC_mat.FacMarg2,as(HiC_mat.FacMarg2ij,"Matrix"))
+   HiC_mat.FacMarg2=cbind(HiC_mat.FacMarg2,as(HiC_mat.FacMarg2ij,"Matrix"))
   }
  }
 }
@@ -99,7 +99,7 @@ for(i in 1:length(facModelS)){
   if(is.null(HiC_mat.FacInter)){
    HiC_mat.FacInter=HiC_mat.FacInterIJ
   }else{
-   HiC_mat.FacInter=cBind(HiC_mat.FacInter,HiC_mat.FacInterIJ)
+   HiC_mat.FacInter=cbind(HiC_mat.FacInter,HiC_mat.FacInterIJ)
   }
   
  }
@@ -123,22 +123,22 @@ HiC_logDist=log(dist)
 HiC_count=HiC_data[,2]
 
 # All data: Matrix format # CHECKED!
-HiC_vecBind=as(cbind(HiC_count,HiC_logDist),"dgCMatrix")
+HiC_vecbind=as(cbind(HiC_count,HiC_logDist),"dgCMatrix")
 if(includeBias){
  if(is.null(HiC_mat.FacMarg2)){
-  HiC_mat.All=cBind(HiC_vecBind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacInter)
-  rm(HiC_vecBind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacInter)
+  HiC_mat.All=cbind(HiC_vecbind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacInter)
+  rm(HiC_vecbind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacInter)
  }else{
-  HiC_mat.All=cBind(HiC_vecBind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
-  rm(HiC_vecBind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
+  HiC_mat.All=cbind(HiC_vecbind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
+  rm(HiC_vecbind,HiC_mat.bias,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
  }
 }else{
  if(is.null(HiC_mat.FacMarg2)){
-  HiC_mat.All=cBind(HiC_vecBind,HiC_mat.FacMarg,HiC_mat.FacInter)
-  rm(HiC_vecBind,HiC_mat.FacMarg,HiC_mat.FacInter)
+  HiC_mat.All=cbind(HiC_vecbind,HiC_mat.FacMarg,HiC_mat.FacInter)
+  rm(HiC_vecbind,HiC_mat.FacMarg,HiC_mat.FacInter)
  }else{
-  HiC_mat.All=cBind(HiC_vecBind,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
-  rm(HiC_vecBind,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
+  HiC_mat.All=cbind(HiC_vecbind,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
+  rm(HiC_vecbind,HiC_mat.FacMarg,HiC_mat.FacMarg2,HiC_mat.FacInter)
  }
 }
 colnames(HiC_mat.All)[1:2]=c("Count","logDist")

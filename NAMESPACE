@@ -14,7 +14,7 @@ importFrom("S4Vectors","queryHits")
 importFrom("GenomeInfoDb", "seqlengths", "seqlevels", "seqlevels<-")
 importFrom("rtracklayer","import")
 importFrom("MASS", "glm.nb")
-importFrom("Matrix", "cBind", "as.matrix", "Matrix")
+importFrom("Matrix", "as.matrix", "Matrix")
 importFrom("glmnet", "cv.glmnet")
 importFrom("HiTC", "x_intervals", "intdata")
 
