@@ -167,7 +167,7 @@ annotateHiCBin <- function(HiC_bin.GR, GenomicFeature.GR)
  for(i in 1:length(chr)){
   HiC_bin.list[[chr[i]]]=HiC_bin.GR[seqnames(HiC_bin.GR)==chr[i]]
  }
- HiC_bin.GRL=GenomicRangesList(HiC_bin.list)
+ HiC_bin.GRL=GRangesList(HiC_bin.list)
 
  if(length(chr)==1){
   averageBin=viewMeans(Views(cvg[[chr]],ranges(HiC_bin.GRL[[chr]])))
